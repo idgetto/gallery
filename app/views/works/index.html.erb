@@ -1,0 +1,7 @@
+<h1>Gallery</h1>
+
+<ul>
+<% @works.each do |work| %>
+<li><%= link_to work.title, work %></li>
+<% end %>
+</ul>

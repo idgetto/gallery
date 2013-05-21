@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  artist: MyString
+  price: 1.5
+  date: 2013-05-21 00:31:08
+  medium: MyString
+  current_location: MyString
+  created_location: MyString
+
+two:
+  title: MyString
+  artist: MyString
+  price: 1.5
+  date: 2013-05-21 00:31:08
+  medium: MyString
+  current_location: MyString
+  created_location: MyString
