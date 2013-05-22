@@ -4,7 +4,7 @@ class CreateWorks < ActiveRecord::Migration
       t.string :title
       t.string :artist
       t.float :price
-      t.datetime :date
+      t.date :date
       t.string :medium
       t.string :current_location
       t.string :created_location

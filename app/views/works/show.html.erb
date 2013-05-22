@@ -4,5 +4,12 @@
 <p>Price: 					$<%=@work.price%></p>
 <p>Medium: 					 <%=@work.medium%></p>
 <p>Date: 						 <%=@work.date%></p>
-<p>Current Location: <%=@work.current_location%></p>
-<p>Created Location: <%=@work.created_location%></p>
+
+
+<% unless @work.current_location.blank? %>
+	<p>Current Location: <%=@work.current_location%></p>
+<% end %>
+
+<% unless @work.created_location.blank? %>
+	<p>Created Location: <%=@work.created_location%></p>
+<% end %>

@@ -1,28 +1,32 @@
 <h1>Add an artwork</h1>
 
-<%= form_for @work do |f| %>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for @work do |f| %>
 
-	<%= f.label :title %>
-	<%= f.text_field :title %><br>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
 
-	<%= f.label :artist %>
-	<%= f.text_field :artist %><br>
+			<%= f.label :artist %>
+			<%= f.text_field :artist %>
 
-	<%= f.label :price %>
-	<%= f.text_field :price, precision: 2 %><br>
+			<%= f.label :price %>
+			<%= f.text_field :price, precision: 3 %>
 
-	<%= f.label :medium %>
-	<%= f.text_field :medium %><br>
+			<%= f.label :medium %>
+			<%= f.text_field :medium %>
 
-	<%= f.label :date %>
-	<%= f.datetime_select :date %><br>
+			<%= f.label :date %>
+			<%= f.date_select :date %>
 
-	<%= f.label :current_location %>
-	<%= f.text_field :current_location %><br>
+			<%= f.label :current_location %>
+			<%= f.text_field :current_location %>
 
-	<%= f.label :created_location %>
-	<%= f.text_field :created_location %>
+			<%= f.label :created_location %>
+			<%= f.text_field :created_location %>
 
-	<%= f.submit "Add artwork" %>
+			<%= f.submit "Add artwork", class: "btn btn-large btn-primary" %>
 
-<% end %>
+		<% end %>
+	</div>
+</div>
