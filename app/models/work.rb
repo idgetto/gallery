@@ -6,6 +6,6 @@ class Work < ActiveRecord::Base
   validates :date, 	 	  presence: true
   validates :price, 		presence: true
   validates :medium,		presence: true
-  validates :file_name, presence:true
+  validates :file_name, presence: true
   
 end
