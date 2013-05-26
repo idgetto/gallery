@@ -1,0 +1,18 @@
+<div class="container">
+	<table class="table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Artist</td>
+				<td>Price</td>
+			</tr>
+		</thead>
+	<% @works.each do |work| %>
+	<tr>
+		<td><%= link_to work.title, work %></td>
+		<td><%= work.artist %></td>
+		<td><%= work.price %></td>
+	</tr>
+	<% end %>
+	</table>
+</div>

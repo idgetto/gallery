@@ -1,0 +1,15 @@
+<ul class="thumbnails">
+	<% @works.each do |work| %>
+  <li class="span3">
+    <div class="thumbnail">
+      <div class="caption">
+      	<%= link_to image_tag(work.file_name, align: "center", class: 'img-rounded'), work %>
+	      <h3><%= link_to work.title, work %></h3>
+	      <p>Artist: <%= work.artist %></p>
+	      <p>Medium: <%= work.medium %></p>
+	      <p>Price: <%= work.price  %></p>
+	    </div>
+    </div>
+  </li>
+  <% end %>
+</ul>

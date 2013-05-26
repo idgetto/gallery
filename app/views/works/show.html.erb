@@ -1,15 +1,35 @@
 <h1><%=@work.title%></h1>
 
-<p>Artist: 					 <%=@work.artist%></p>
-<p>Price: 					$<%=@work.price%></p>
-<p>Medium: 					 <%=@work.medium%></p>
-<p>Date: 						 <%=@work.date%></p>
+<div class="row">
+	<div class="span4">
+		<p>Artist: 					 					 <%=@work.artist%></p>
+		<p>Price: 	 <%=number_to_currency @work.price%></p>
+		<p>Medium: 										 <%=@work.medium%></p>
+		<p>Date: 												 <%=@work.date%></p>
 
 
-<% unless @work.current_location.blank? %>
-	<p>Current Location: <%=@work.current_location%></p>
-<% end %>
+		<% unless @work.current_location.blank? %>
+			<p>Current Location: <%=@work.current_location%></p>
+		<% end %>
 
-<% unless @work.created_location.blank? %>
-	<p>Created Location: <%=@work.created_location%></p>
-<% end %>
+		<% unless @work.created_location.blank? %>
+			<p>Created Location: <%=@work.created_location%></p>
+		<% end %>
+	</div>
+	<div class="span8">
+		<%= image_tag @work.file_name, align: 'right', class: 'img-rounded' %>
+	</div>
+</div>
+<div class="row">
+	<ul class="pager">
+	  <li class="previous <%= "disabled" if @work.id == 1 %> ">
+	    <a href= <%= work_path(@work.id - 1) %> >&larr; Previous</a>
+	  </li>
+
+		<li><a href= <%= works_path %>>All Works</a></li>
+
+	  <li class="next <%= "disabled" if @work.id == 10 %> ">
+	    <a href= <%= work_path(@work.id + 1) %> >Next &rarr;</a>
+	  </li>
+	</ul>
+</div>

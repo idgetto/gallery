@@ -3,8 +3,8 @@ class CreateWorks < ActiveRecord::Migration
     create_table :works do |t|
       t.string :title
       t.string :artist
-      t.float :price
-      t.date :date
+      t.float  :decimal
+      t.date   :date
       t.string :medium
       t.string :current_location
       t.string :created_location
