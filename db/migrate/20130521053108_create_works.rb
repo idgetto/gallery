@@ -6,6 +6,7 @@ class CreateWorks < ActiveRecord::Migration
       t.float  :decimal
       t.date   :date
       t.string :medium
+      t.string :file_name
       t.string :current_location
       t.string :created_location
 
