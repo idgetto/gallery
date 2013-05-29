@@ -7,7 +7,7 @@
 	      <h3><%= link_to work.title, work %></h3>
 	      <p>Artist: <%= work.artist %></p>
 	      <p>Medium: <%= work.medium %></p>
-	      <p>Price: <%= work.price  %></p>
+	      <p>Price:  <%= number_to_currency work.price  %></p>
 	    </div>
     </div>
   </li>

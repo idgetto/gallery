@@ -17,7 +17,7 @@
 			<%= f.text_field :medium %>
 
 			<%= f.label :date %>
-			<%= f.date_select :date %>
+			<%= f.date_select :date, discard_day: true, discard_month: true, start_year: 1800 %>
 
 			<%= f.label :file_name, "File name" %>
 			<%= f.text_field :file_name %>
@@ -27,6 +27,9 @@
 
 			<%= f.label :created_location %>
 			<%= f.text_field :created_location %>
+
+			<%= f.label :description %>
+			<%= f.text_area :description, rows: 5 %>
 
 			<%= f.submit "Add artwork", class: "btn btn-large btn-primary" %>
 

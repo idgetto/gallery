@@ -7,6 +7,8 @@
 		<p>Medium: 										 <%=@work.medium%></p>
 		<p>Date: 												 <%=@work.date%></p>
 
+		<p><%= @work.description %></p>
+
 
 		<% unless @work.current_location.blank? %>
 			<p>Current Location: <%=@work.current_location%></p>
@@ -22,13 +24,13 @@
 </div>
 <div class="row">
 	<ul class="pager">
-	  <li class="previous <%= "disabled" if @work.id == 1 %> ">
+	  <li class="previous <%= "disabled" if @work == @first_work %> ">
 	    <a href= <%= work_path(@work.id - 1) %> >&larr; Previous</a>
 	  </li>
 
 		<li><a href= <%= works_path %>>All Works</a></li>
 
-	  <li class="next <%= "disabled" if @work.id == 10 %> ">
+	  <li class="next <%= "disabled" if @work == @last_work %> ">
 	    <a href= <%= work_path(@work.id + 1) %> >Next &rarr;</a>
 	  </li>
 	</ul>
