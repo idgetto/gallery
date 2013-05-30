@@ -5,7 +5,7 @@
 		<p>Artist: 					 					 <%=@work.artist%></p>
 		<p>Price: 	 <%=number_to_currency @work.price%></p>
 		<p>Medium: 										 <%=@work.medium%></p>
-		<p>Date: 												 <%=@work.date%></p>
+		<p>Date: 												 <%=@work.date.year%></p>
 
 		<p>Description: <%= @work.description %></p>
 
