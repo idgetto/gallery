@@ -6,8 +6,8 @@ class WorksController < ApplicationController
 
   def show
   	@work = Work.find(params[:id])
-    @first_work = Work.first
-    @last_work  = Work.last
+    #@first_work = Work.first
+    #@last_work  = Work.last
   end
 
   def new
