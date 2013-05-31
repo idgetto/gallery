@@ -1,6 +1,6 @@
 Gallery::Application.routes.draw do
   resources :static_pages
-  resources :works, only: [:index, :show]
+  resources :works#, only: [:index, :show]
   
   root to: 'static_pages#home'
 
