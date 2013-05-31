@@ -22,23 +22,28 @@
 		<%= image_tag @work.file_name, align: 'right', class: 'img-rounded' %>
 	</div>
 </div>
-<!--
+
 <div class="row">
 	<ul class="pager">
-		<% if @work == @first_work %>
+		<% if @work.previous.nil? %>
 	  	<li class="previous disabled" >
 	    <a href= # >&larr; Previous</a>
     <% else %> 
     	<li class="previous" >
-	    <a href= <%= work_path(@work.id - 1) %> >&larr; Previous</a>
+	    <a href= <%= work_path(@work.previous) %> >&larr; Previous</a>
     <% end %>
 	  </li>
 
 		<li><a href= <%= works_path %>>All Works</a></li>
 
-	  <li class="next <%= "disabled" if @work == @last_work %> ">
-	    <a href= <%= work_path(@work.id + 1) %> >Next &rarr;</a>
+		<% if @work.next.nil? %>
+	  <li class="next disabled" >
+	    <a href= # >Next &rarr;</a>
+	  <% else %>
+	  <li class="next" >
+	    <a href= <%= work_path(@work.next) %> >Next &rarr;</a>
+	  <% end %>
 	  </li>
 	</ul>
 </div>
--->
+
