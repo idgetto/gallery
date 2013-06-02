@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-  	@works = Work.all
+  	@works = Work.paginate(page: params[:page], per_page: 10)
     @style = params[:style]
   end
 
