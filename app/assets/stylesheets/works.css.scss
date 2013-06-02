@@ -238,3 +238,8 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+/* credit to denis-bu @ bit.ly/11OSmf4 */
+ul.thumbnails.per4 > li:nth-child(4n+1) {
+  clear: left;
+}
