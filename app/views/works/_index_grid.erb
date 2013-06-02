@@ -1,5 +1,11 @@
-
-
+<div class="row">
+  <div class="span6">
+    <%= will_paginate %>
+  </div>
+  <div class="span6">
+    <%= render 'layouts/button_toolbar' %>
+  </div>
+</div>
 
 <ul class="thumbnails per4">
 	<% @works.each do |work| %>
@@ -17,3 +23,4 @@
   <% end %>
 </ul>
 
+<%= will_paginate %>

@@ -90,10 +90,12 @@ footer {
     color: $gray;
     &:hover { 
       color: $grayDarker;
+      text-decoration: none;
     }
   }  
   small { 
     float: left; 
+    font-size: 1em;
   }
   ul {
     float: right;
