@@ -2,7 +2,7 @@ class WorksController < ApplicationController
   def index
     @style = params[:style]
     if @style == 'grid'
-  	  @works = Work.paginate(page: params[:page], per_page: 10)
+  	  @works = Work.paginate(page: params[:page], per_page: 12)
     else
       @works = Work.all
     end
