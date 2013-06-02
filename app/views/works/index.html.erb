@@ -1,8 +1,8 @@
 <h1>Art Works</h1>
 
-<% if @style == 'list' %>
-	<%= render 'index_list' %>
-<% else %>
+<% if @style == 'grid' %>
 	<%= render 'index_grid' %>
+<% else %>
+	<%= render 'index_list' %>
 <% end %>
 
