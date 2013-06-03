@@ -7,7 +7,7 @@ class Work < ActiveRecord::Base
   validates :price, 			presence: true
   validates :medium,			presence: true
   validates :file_name, 	presence: true
-  validates :description, presence: true  
+  
 
 	def next
 		Work.first(conditions: ['id > ?', self.id], order: 'id ASC')
