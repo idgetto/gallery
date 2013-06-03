@@ -34,7 +34,7 @@
     <% end %>
 	  </li>
 
-		<li><a href= <%= works_path %>>All Works</a></li>
+		<li><a href= <%= works_path(style: 'grid') %>>All Works</a></li>
 
 		<% if @work.next.nil? %>
 	  <li class="next disabled" >
